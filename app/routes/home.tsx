@@ -1,5 +1,4 @@
 import type { Route } from './+types/home';
-import { Welcome } from '../welcome/welcome';
 import Header from 'app/components/Header';
 import GridLayaout from '~/components/GridLayaout';
 
@@ -12,9 +11,11 @@ export function meta({}: Route.MetaArgs) {
 
 export default function Home() {
   return (
-    <div>
+    <div className='flex flex-col min-h-screen'>
       <Header />
-      <GridLayaout />
+      <main className='flex-1'>
+        <GridLayaout />
+      </main>
     </div>
   );
 }
